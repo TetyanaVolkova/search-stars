@@ -1,1 +1,15 @@
+
+<mat-toolbar color="primary">
+    <span>LOGO</span>
+    <span class="spacer"></span>
+    <button mat-icon-button class="icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>profile</mat-icon>
+    </button>
+    <button *ngIf="router.url.includes('/job-seeker')" routerLink="hr-view" mat-icon-button class="icon" aria-label="Example icon-button with share icon">
+        <mat-icon>logout</mat-icon>
+    </button>
+    <button *ngIf="router.url.includes('/hr-view')" routerLink="job-seeker" mat-icon-button class="icon" aria-label="Example icon-button with share icon">
+        <mat-icon>logout</mat-icon>
+    </button>
+</mat-toolbar>
 <router-outlet></router-outlet>

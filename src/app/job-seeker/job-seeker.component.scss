@@ -1,0 +1,86 @@
+:host{
+    height: 100%;
+};
+
+::ng-deep .mat-button-wrapper {
+    writing-mode: vertical-rl;
+};
+
+button {
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+    height: 26%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    display: flex;
+    margin: auto 0;
+    background: rgb(227, 232, 248);
+    min-width: 30px;
+    max-width: 30px;
+::ng-deep span {
+        margin: auto;
+    }
+};
+
+.container {
+    height: 100%;
+};
+
+.toggle-container {
+    display: flex;
+};
+
+::ng-deep .mat-drawer-inner-container {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    div {
+        background: rgb(241, 235, 240);
+        margin: auto;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        border: 1px solid grey;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 0 8px;
+        justify-content: center;
+        flex-direction: column;
+    }
+};
+
+// .pink {
+//     background: rgb(192, 129, 177)
+// };
+
+// .light-pink {
+//     background: #f8dbf1
+// };
+
+// .yellow {
+//     background: rgb(235, 228, 155)
+// };
+
+// .grey {
+//     background: rgb(211, 208, 210)
+// };
+
+// .peach {
+//     background: rgb(247, 187, 119)
+// };
+
+// .blue-grey {
+//     background: rgb(205, 220, 235)
+// };
+
+// .dark-grey {
+//     background: rgb(136, 141, 146)
+// };
