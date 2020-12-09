@@ -7,8 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  constructor(public router: Router) {}
-
+  constructor(public router: Router) {  }
+  title = 'SearchStars';
   ngOnInit(): void {
     this.router.initialNavigation();
     console.log(this.router);

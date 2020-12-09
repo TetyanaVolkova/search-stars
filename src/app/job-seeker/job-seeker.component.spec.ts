@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { JobSeekerComponent } from './job-seeker.component';
+import {FormBuilder} from '@angular/forms';
 
 describe('JobSeekerComponent', () => {
   let component: JobSeekerComponent;
@@ -20,6 +21,9 @@ describe('JobSeekerComponent', () => {
   });
 
   it('should create', () => {
+    fixture = TestBed.createComponent(JobSeekerComponent);
+    component = fixture.componentInstance;
     expect(component).toBeTruthy();
   });
+
 });

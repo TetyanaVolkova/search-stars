@@ -16,7 +16,7 @@ export class RadarChartComponent implements OnInit {
     responsive: false,
   };
   constructor() { }
-  ngOnInit() {
+  ngOnInit(): void {
   }
   public chartClicked({ event, active }: { event: MouseEvent, active: {}[] }): void {
     console.log(event, active);
