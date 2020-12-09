@@ -2,7 +2,7 @@
     height: 100%;
 };
 
-::ng-deep .mat-button-wrapper {
+#bookmark_button ::ng-deep .mat-button-wrapper {
     writing-mode: vertical-rl;
 };
 
@@ -23,6 +23,9 @@ button {
     background: rgb(227, 232, 248);
     min-width: 30px;
     max-width: 30px;
+    position: fixed;
+    top: 45%;
+    z-index: 9999;
 ::ng-deep span {
         margin: auto;
     }
@@ -46,7 +49,7 @@ button {
         background: rgb(241, 235, 240);
         margin: auto;
         height: 100%;
-        width: 100%;
+        width: 82%;
         display: flex;
         border: 1px solid grey;
         border-radius: 5px;
@@ -56,6 +59,16 @@ button {
         flex-direction: column;
     }
 };
+
+::ng-deep .mat-drawer-inner-container div:hover {
+    background: opacify($color: #ffffff, $amount: 1);
+    border: none;
+}
+
+.active {
+    background: rgba(198, 198, 247, 0.5);
+    border: 1px solid #432ff776;
+}
 
 // .pink {
 //     background: rgb(192, 129, 177)

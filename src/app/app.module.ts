@@ -18,6 +18,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SearchComponent } from './job-seeker/search/search.component';
 import { ProfileComponent } from './job-seeker/profile/profile.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from "@angular/common";
+import { MatCardModule } from '@angular/material/card';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatDividerModule } from '@angular/material/divider';
 
 
 @NgModule({
@@ -29,8 +34,10 @@ import { ProfileComponent } from './job-seeker/profile/profile.component';
     ProfileComponent
   ],
   imports: [
-    RouterModule,
     BrowserModule,
+    CommonModule,
+    HttpClientModule,
+    RouterModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
@@ -41,9 +48,12 @@ import { ProfileComponent } from './job-seeker/profile/profile.component';
     MatSlideToggleModule,
     MatFormFieldModule,
     MatSidenavModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule,
+    MatTooltipModule,
+    MatDividerModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] 
 })
 export class AppModule { }

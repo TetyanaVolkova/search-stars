@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { HttpService } from '../http.service';
 
 @Component({
   selector: 'app-job-seeker',
@@ -9,14 +10,11 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 export class JobSeekerComponent implements OnInit {
   options: FormGroup;
 
-  constructor(fb: FormBuilder) {
+  constructor(fb: FormBuilder, private httpService: HttpService) {
     this.options = fb.group({
-      bottom: 0,
-      fixed: false,
-      top: 0
     });
   }
-  
+
   ngOnInit(): void {
   }
 
