@@ -25,9 +25,12 @@ export class RadarChartComponent implements OnInit {
   public height = 250;
   constructor() { }
   ngOnInit(): void {
+<<<<<<< HEAD
   }
   getRandomInt(max): number {
     return Math.floor(Math.random() * Math.floor(max));
+=======
+>>>>>>> updated radar chart component
   }
   public chartClicked({ event, active }: { event: MouseEvent, active: {}[] }): void {
     console.log(event, active);
