@@ -31,12 +31,14 @@ export class SearchComponent implements OnInit {
     myForm.form.controls.search.setValue('');
   }
 
-  onMoreDetails(id) {
-    console.log(id);
+  onMoreDetails(job) {
+    console.log(job.description);
     this.moreDetails = !this.moreDetails;
-
+    const description = job.description;
     if(this.moreDetails) {
-
+      document.getElementById(job.id).innerHTML = description;
+    } else {
+      document.getElementById(job.id).innerHTML = '';
     }
   }
 

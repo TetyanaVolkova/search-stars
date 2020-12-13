@@ -7,10 +7,11 @@
     </mat-form-field>
     <button mat-button [disabled]="!f.valid" color="primary" type="submit">Submit</button>
 </form>
-<mat-divider></mat-divider>
+<mat-divider
+    [style.display]="moreDetails? 'none' : 'block'">
+</mat-divider>
 <div *ngFor="let job of jobs">
     <mat-card
-        id="{{job.id}}"
         [ngClass]="{'moreDetails': moreDetails}"
         class="card">
         <mat-card-header>
@@ -27,8 +28,7 @@
             <mat-card-subtitle>{{job.title}}</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-            <p>
-            </p>
+            <p id="{{job.id}}"></p>
             <p>
                 <small>Posted: </small>
                 {{job.publication_date | date}}
@@ -37,7 +37,7 @@
         <mat-card-actions>
             <button
                 mat-button color="warn"
-                (click)="onMoreDetails(job.id)">
+                (click)="onMoreDetails(job)">
                 {{moreDetails? "Less ": "More "}}details
             </button>
         </mat-card-actions>

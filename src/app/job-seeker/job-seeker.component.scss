@@ -42,14 +42,15 @@ button {
 ::ng-deep .mat-drawer-inner-container {
     display: flex;
     flex-direction: column;
+    height: calc(100% - 60px) !important;    
     -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
        -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
             box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
     div {
         background: rgb(241, 235, 240);
         margin: auto;
+        width: 81%;
         height: 100%;
-        width: 82%;
         display: flex;
         border: 1px solid grey;
         border-radius: 5px;
@@ -63,6 +64,10 @@ button {
 ::ng-deep .mat-drawer-inner-container div:hover {
     background: opacify($color: #ffffff, $amount: 1);
     border: none;
+}
+
+::ng-deep .mat-drawer {
+    height: 100vh;
 }
 
 .active {
