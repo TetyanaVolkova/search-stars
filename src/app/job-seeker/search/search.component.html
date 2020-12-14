@@ -17,6 +17,16 @@
             </mat-slide-toggle>
         </form>
     </div>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <mat-form-field appearance="outline">
+        <mat-label for="name">
+            Search
+        </mat-label>
+        <input required matInput name="search" ngModel>
+        </mat-form-field>
+        <button mat-button [disabled]="!f.valid" color="primary" type="submit">Submit</button>
+    </form>
+
     <mat-divider
         [style.display]="moreDetails? 'none' : 'block'">
     </mat-divider>
