@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/http.service';
+import { RadarChartComponent} from '../../radar-chart/radar-chart.component';
 
 @Component({
   selector: 'app-search',
@@ -22,15 +23,14 @@ export class SearchComponent implements OnInit {
 
   onSubmit(myForm): void {
     this.httpService.getJobs(myForm.form.controls.search.value)
-    .subscribe((jobs) => {
-      this.jobs = jobs['jobs'];
-      console.log(this.jobs);
-    });
+      .subscribe((jobs) => {
+        this.jobs = jobs['jobs'];
+        console.log(this.jobs);
+      });
 
     console.log(myForm.form.controls.search.value);
     myForm.form.controls.search.setValue('');
   }
-
   onMoreDetails(job) {
     this.moreDetails = !this.moreDetails;
     const description = job.description;
@@ -41,7 +41,7 @@ export class SearchComponent implements OnInit {
     } else {
       document.getElementById(job.id).innerHTML = '';
       document.getElementById('card-'+job.id).classList.remove('more_details');
-      document.getElementById('search_wrapper').classList.remove('overflow_hidden');ß
+      document.getElementById('search_wrapper').classList.remove('overflow_hidden');
     }
   }
 
