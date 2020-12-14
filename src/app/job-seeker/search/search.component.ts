@@ -35,17 +35,12 @@ export class SearchComponent implements OnInit {
     console.log(this.formGroup.value);
   }
 
-  onFormChange() {
-    console.log(this.formGroup.value);
-  }
-
   onSubmit(myForm): void {
     this.httpService.getJobs(myForm.form.controls.search.value)
       .subscribe((jobs) => {
         this.jobs = jobs['jobs'];
         console.log(this.jobs);
       });
-
 
     console.log(myForm.form.controls.search.value);
     myForm.form.controls.search.setValue('');
@@ -60,7 +55,7 @@ export class SearchComponent implements OnInit {
     } else {
       document.getElementById(job.id).innerHTML = '';
       document.getElementById('card-'+job.id).classList.remove('more_details');
-      document.getElementById('search_wrapper').classList.remove('overflow_hidden');ß
+      document.getElementById('search_wrapper').classList.remove('overflow_hidden');
     }
   }
 
