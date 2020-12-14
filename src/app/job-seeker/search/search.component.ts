@@ -41,6 +41,7 @@ export class SearchComponent implements OnInit {
         console.log(this.jobs);
       });
 
+
     console.log(myForm.form.controls.search.value);
     myForm.form.controls.search.setValue('');
   }
@@ -54,7 +55,7 @@ export class SearchComponent implements OnInit {
     } else {
       document.getElementById(job.id).innerHTML = '';
       document.getElementById('card-'+job.id).classList.remove('more_details');
-      document.getElementById('search_wrapper').classList.remove('overflow_hidden');
+      document.getElementById('search_wrapper').classList.remove('overflow_hidden');ß
     }
   }
 
