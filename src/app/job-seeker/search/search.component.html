@@ -9,7 +9,7 @@
             </mat-form-field>
             <button mat-button [disabled]="!f.valid" color="primary" type="submit">Search jobs</button>
         </form>
-        
+
         <form id="toggle_form" [formGroup]="formGroup" ngNativeValidate>
             <mat-slide-toggle
                 formControlName="view"
@@ -17,6 +17,16 @@
             </mat-slide-toggle>
         </form>
     </div>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <mat-form-field appearance="outline">
+        <mat-label for="name">
+            Search
+        </mat-label>
+        <input required matInput name="search" ngModel>
+        </mat-form-field>
+        <button mat-button [disabled]="!f.valid" color="primary" type="submit">Submit</button>
+    </form>
+
     <mat-divider
         [style.display]="moreDetails? 'none' : 'block'">
     </mat-divider>
@@ -37,13 +47,21 @@
                     </div>
                     <mat-card-title><small>Company name: </small>{{job.company_name}}</mat-card-title>
                     <mat-card-subtitle>{{job.title}}</mat-card-subtitle>
+
                 </mat-card-header>
-                <mat-card-content>
-                    <p id="{{job.id}}"></p>
+                <mat-card-content style="display: block">
+                  <div class="mat-card-content-left" style=" width: 70%; float: left; display: flex">
+                    <div id="{{job.id}}-div" style="width: 70%"><p id="{{job.id}}"></p></div>
+                    <div id="{{job.id}}-chart" style="width: 30%; float: right" *ngIf="moreDetails"><app-radar-chart [width]="100" [height]="100"></app-radar-chart></div>
                     <p>
                         <small>Posted: </small>
                         {{job.publication_date | date}}
                     </p>
+                  </div>
+
+
+
+
                 </mat-card-content>
                 <mat-card-actions>
                     <button
@@ -55,7 +73,11 @@
             </mat-card>
         </div>
     </div>
+<<<<<<< HEAD
     <div *ngIf="formGroup.value.view" id="chart_view">
         <iframe src="https://remotive.io/"></iframe>
     </div>
 </div>
+=======
+</div>
+>>>>>>> added embedded radar chart compoent
