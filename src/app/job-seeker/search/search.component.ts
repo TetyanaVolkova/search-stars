@@ -32,13 +32,16 @@ export class SearchComponent implements OnInit {
   }
 
   onMoreDetails(job) {
-    console.log(job.description);
     this.moreDetails = !this.moreDetails;
     const description = job.description;
     if(this.moreDetails) {
       document.getElementById(job.id).innerHTML = description;
+      document.getElementById('card-'+job.id).classList.add('more_details');
+      document.getElementById('search_wrapper').classList.add('overflow_hidden');
     } else {
       document.getElementById(job.id).innerHTML = '';
+      document.getElementById('card-'+job.id).classList.remove('more_details');
+      document.getElementById('search_wrapper').classList.remove('overflow_hidden');
     }
   }
 
