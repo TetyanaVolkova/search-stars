@@ -60,7 +60,7 @@ export class SearchComponent implements OnInit {
     } else {
       document.getElementById(job.id).innerHTML = '';
       document.getElementById('card-'+job.id).classList.remove('more_details');
-      document.getElementById('search_wrapper').classList.remove('overflow_hidden');ß
+      document.getElementById('search_wrapper').classList.remove('overflow_hidden');
     }
   }
 
