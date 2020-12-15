@@ -1,13 +1,22 @@
  <div id="search_wrapper">
-    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
-        <mat-form-field appearance="outline">
-        <mat-label for="name">
-            Search
-        </mat-label>
-        <input required matInput name="search" ngModel>
-        </mat-form-field>
-        <button mat-button [disabled]="!f.valid" color="primary" type="submit">Submit</button>
-    </form>
+     <div id="forms_wrapper">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <mat-form-field appearance="outline">
+            <mat-label for="name">
+                Search
+            </mat-label>
+            <input required matInput name="search" ngModel>
+            </mat-form-field>
+            <button mat-button [disabled]="!f.valid" color="primary" type="submit">Search jobs</button>
+        </form>
+
+        <form id="toggle_form" [formGroup]="formGroup" ngNativeValidate>
+            <mat-slide-toggle
+                formControlName="view"
+                (change)="onFormChange()">{{formGroup.value.view ? 'Chart View' : 'Cards View'}}
+            </mat-slide-toggle>
+        </form>
+    </div>
     <mat-divider
         [style.display]="moreDetails? 'none' : 'block'">
     </mat-divider>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/http.service';
 import { RadarChartComponent} from '../../radar-chart/radar-chart.component';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+
 
 
 @Component({
@@ -29,6 +31,10 @@ export class SearchComponent implements OnInit {
     });
   }
   
+  onFormChange() {
+    console.log(this.formGroup.value);
+  }
+
   onFormChange() {
     console.log(this.formGroup.value);
   }
