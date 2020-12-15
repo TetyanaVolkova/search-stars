@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/http.service';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-search',
@@ -9,8 +10,15 @@ import { HttpService } from 'src/app/http.service';
 export class SearchComponent implements OnInit {
   jobs = [];
   moreDetails = false;
+  isChecked = true;
+  formGroup: FormGroup;
 
-  constructor(private httpService: HttpService) { }
+  constructor(private httpService: HttpService,
+              formBuilder: FormBuilder) {
+      this.formGroup = formBuilder.group({
+        view: ''
+    });
+  }
 
   ngOnInit(): void {
     this.httpService.getJobs(null)
@@ -18,6 +26,10 @@ export class SearchComponent implements OnInit {
       this.jobs = jobs['jobs'];
       console.log(this.jobs)
     })
+  }
+  
+  onFormChange() {
+    console.log(this.formGroup.value);
   }
 
   onSubmit(myForm) {

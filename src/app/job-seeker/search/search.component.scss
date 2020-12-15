@@ -1,10 +1,6 @@
-// #search_wrapper {
-//     width: 100%;
-//     display: flex;
-//     flex-wrap: wrap;
-//     grid-gap: 20px;
-//     justify-content: center;
-// }
+:host {
+    width: 100%;
+}
 
 .card {
     display: flex;
@@ -19,6 +15,7 @@
     flex-wrap: wrap;
     grid-gap: 20px;
     justify-content: center;
+    padding-bottom: 100px;
 }
 
 .mat-card-content {
@@ -58,7 +55,8 @@ form {
 }
 
 .mat-divider {
-    width: 90%;
+    width: 80%;
+    margin: auto;
 }
 
 .more_details {
@@ -78,4 +76,23 @@ form {
 .overflow_hidden {
     height: 0;
     overflow: hidden;
+}
+
+#chart_view {
+    height: 75vh;
+    width: 93%;
+    margin-left: 4vw;
+}
+
+iframe {
+    height: 100%;
+    width: 100%;
+}
+
+#forms_wrapper {
+    display: flex;
+}
+
+#toggle_form {
+    margin-top: 18px;
 }
