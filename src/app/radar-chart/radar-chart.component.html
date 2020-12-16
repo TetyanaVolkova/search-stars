@@ -1,12 +1,14 @@
 
 <div>
-  <div style="padding: 180px">
+  <div style="padding: 18px">
     <div style="display: block">
       <canvas baseChart
               [datasets]="radarChartData"
               [options]="radarChartOptions"
               [labels]="radarChartLabels"
-              [chartType]="radarChartType"  width="600" height="600">
+              [chartType]="radarChartType"
+              [width]="width"
+              [height]="height">
       </canvas>
     </div>
   </div>
