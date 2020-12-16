@@ -1,4 +1,5 @@
  <div id="search_wrapper">
+<<<<<<< HEAD
      <div id="forms_wrapper">
         <form #f="ngForm" (ngSubmit)="onSubmit(f)">
             <mat-form-field appearance="outline">
@@ -17,6 +18,8 @@
             </mat-slide-toggle>
         </form>
     </div>
+=======
+>>>>>>> ba3f5a8158040069a451490f8529a6c4af8f34fd
     <form #f="ngForm" (ngSubmit)="onSubmit(f)">
         <mat-form-field appearance="outline">
         <mat-label for="name">
@@ -73,6 +76,7 @@
                 </mat-card-actions>
             </mat-card>
         </div>
+      <app-jobs-scatter-plot style="width: 800px; height: 800px"></app-jobs-scatter-plot>
     </div>
     <div *ngIf="formGroup.value.view" id="chart_view">
         <iframe src="https://remotive.io/"></iframe>

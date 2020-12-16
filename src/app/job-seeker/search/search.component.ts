@@ -27,6 +27,7 @@ export class SearchComponent implements OnInit {
       this.jobs = jobs['jobs'];
       console.log(this.jobs);
     });
+
   }
 
   onFormChange() {
