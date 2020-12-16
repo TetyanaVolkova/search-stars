@@ -32,6 +32,9 @@ export class RadarChartComponent implements OnInit {
 =======
 >>>>>>> updated radar chart component
   }
+  getRandomInt(max): number {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
   public chartClicked({ event, active }: { event: MouseEvent, active: {}[] }): void {
     console.log(event, active);
   }
@@ -39,4 +42,5 @@ export class RadarChartComponent implements OnInit {
   public chartHovered({ event, active }: { event: MouseEvent, active: {}[] }): void {
     console.log(event, active);
   }
+
 }
