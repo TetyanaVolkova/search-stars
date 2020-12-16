@@ -32,7 +32,6 @@ import { PlotlyModule } from 'angular-plotly.js';
 
 PlotlyModule.plotlyjs = PlotlyJS;
 
-
 @NgModule({
   declarations: [
     AppComponent,
