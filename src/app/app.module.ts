@@ -26,7 +26,11 @@ import { MatDividerModule } from '@angular/material/divider';
 
 import { ChartsModule } from 'ng2-charts';
 import { RadarChartComponent } from './radar-chart/radar-chart.component';
+import { JobsScatterPlotComponent } from './jobs-scatter-plot/jobs-scatter-plot.component';
+import * as PlotlyJS from 'plotly.js/dist/plotly.js';
+import { PlotlyModule } from 'angular-plotly.js';
 
+PlotlyModule.plotlyjs = PlotlyJS;
 
 @NgModule({
   declarations: [
@@ -35,7 +39,8 @@ import { RadarChartComponent } from './radar-chart/radar-chart.component';
     HRViewComponent,
     SearchComponent,
     ProfileComponent,
-    RadarChartComponent
+    RadarChartComponent,
+    JobsScatterPlotComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +61,8 @@ import { RadarChartComponent } from './radar-chart/radar-chart.component';
     MatCardModule,
     MatTooltipModule,
     MatDividerModule,
-    ChartsModule
+    ChartsModule,
+    PlotlyModule
   ],
   providers: [],
   bootstrap: [AppComponent]
