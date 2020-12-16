@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/http.service';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { RadarChartComponent} from '../../radar-chart/radar-chart.component';
 
 
@@ -28,7 +29,13 @@ export class SearchComponent implements OnInit {
       this.jobs = jobs['jobs'];
       console.log(this.jobs);
     });
+
   }
+
+  onFormChange() {
+    console.log(this.formGroup.value);
+  }
+
 
   onSubmit(myForm): void {
     this.httpService.getJobs(myForm.form.controls.search.value)
@@ -36,6 +43,7 @@ export class SearchComponent implements OnInit {
         this.jobs = jobs['jobs'];
         console.log(this.jobs);
       });
+
 
     console.log(myForm.form.controls.search.value);
     myForm.form.controls.search.setValue('');
