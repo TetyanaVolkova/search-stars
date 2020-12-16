@@ -11,7 +11,7 @@
     <mat-divider
         [style.display]="moreDetails? 'none' : 'block'">
     </mat-divider>
-    <div id="cards_wrapper">
+    <div *ngIf="!formGroup.value.view" id="cards_wrapper">
         <div *ngFor="let job of jobs">
             <mat-card
                 id="card-{{job.id}}"
@@ -54,4 +54,8 @@
             </mat-card>
         </div>
     </div>
+    <div *ngIf="formGroup.value.view" id="chart_view">
+        <iframe src="https://remotive.io/"></iframe>
+    </div>
 </div>
+
