@@ -34,6 +34,7 @@
                   <div class="mat-card-content-left" style=" width: 70%; float: left; display: flex">
                     <div id="{{job.id}}-div" style="width: 70%"><p id="{{job.id}}"></p></div>
                     <div id="{{job.id}}-chart" style="width: 30%; float: right" *ngIf="moreDetails"><app-radar-chart [width]="100" [height]="100"></app-radar-chart></div>
+
                     <p>
                         <small>Posted: </small>
                         {{job.publication_date | date}}
@@ -53,5 +54,6 @@
                 </mat-card-actions>
             </mat-card>
         </div>
+      <app-jobs-scatter-plot style="width: 800px; height: 800px"></app-jobs-scatter-plot>
     </div>
 </div>
