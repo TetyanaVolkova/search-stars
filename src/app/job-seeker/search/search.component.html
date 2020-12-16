@@ -73,8 +73,9 @@
                 </mat-card-actions>
             </mat-card>
         </div>
+
     </div>
-    <div *ngIf="formGroup.value.view" id="chart_view">
-        <iframe src="https://remotive.io/"></iframe>
+    <div *ngIf="formGroup.value.view" id="chart_view"  style="text-align: center">
+      <app-jobs-scatter-plot></app-jobs-scatter-plot>
     </div>
 </div>:
