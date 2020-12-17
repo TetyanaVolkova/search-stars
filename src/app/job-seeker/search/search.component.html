@@ -31,13 +31,15 @@
                 </mat-card-header>
 
               <mat-card-content style="display: block">
-                <div class="mat-card-content-left" style=" width: 70%; float: left; display: flex">
+                <div class="mat-card-content-left" style=" width: 70%; float: left">
+
                 <div id="{{job.id}}-div" style="width: 70%"><p id="{{job.id}}"></p></div>
-                <div id="{{job.id}}-chart" style="width: 30%; float: right" *ngIf="moreDetails"><app-radar-chart></app-radar-chart></div>
                 <p>
                   <small>Posted: </small>
                   {{job.publication_date | date}}
                 </p>
+                <div id="{{job.id}}-chart" style="width: 30%; position: fixed; top: 190px; right: 80px"  *ngIf="moreDetails"><app-radar-chart></app-radar-chart></div>
+
                 </div>
               </mat-card-content>
                 <!--               <mat-card-content>
