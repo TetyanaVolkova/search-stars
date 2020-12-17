@@ -126,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "search-stars"
+  "defaultProject": "search-stars",
+  "cli": {
+    "analytics": false
+  }
 }
