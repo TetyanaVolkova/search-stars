@@ -47,18 +47,10 @@
                   <small>Posted: </small>
                   {{job.publication_date | date}}
                 </p>
-                <div id="{{job.id}}-chart" style="width: 30%; position: fixed; top: 190px; right: 80px"  *ngIf="moreDetails"><app-radar-chart></app-radar-chart></div>
+                <div id="{{job.id}}-chart" class="job-match-radar-chart" *ngIf="moreDetails"><app-radar-chart></app-radar-chart></div>
 
                 </div>
               </mat-card-content>
-                <!--               <mat-card-content>
-                                   <p id="{{job.id}}"></p>
-                                   <p>
-                                       <small>Posted: </small>
-                                       {{job.publication_date | date}}
-                                   </p>
-                               </mat-card-content>
-                -->
                 <mat-card-actions>
                     <button
                         mat-button color="warn"

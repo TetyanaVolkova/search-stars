@@ -26,6 +26,13 @@
     overflow: auto;
 }
 
+.job-match-radar-chart {
+  width: 30%;
+  position: fixed;
+  top: 190px;
+  right: 80px;
+}
+
 .mat-card-content p:first-child {
     overflow: auto;
     flex-grow: 1;
