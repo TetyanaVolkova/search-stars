@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/http.service';
+import { RadarChartComponent} from '../../radar-chart/radar-chart.component';
 
 @Component({
   selector: 'app-search',

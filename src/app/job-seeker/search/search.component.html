@@ -1,5 +1,5 @@
  <div id="search_wrapper">
-    <form #f="ngForm" (ngSubmit)="onSubmit(f)">   
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
         <mat-form-field appearance="outline">
         <mat-label for="name">
             Search
@@ -29,13 +29,25 @@
                     <mat-card-title><small>Company name: </small>{{job.company_name}}</mat-card-title>
                     <mat-card-subtitle>{{job.title}}</mat-card-subtitle>
                 </mat-card-header>
-                <mat-card-content>
-                    <p id="{{job.id}}"></p>
-                    <p>
-                        <small>Posted: </small>
-                        {{job.publication_date | date}}
-                    </p>
-                </mat-card-content>
+
+              <mat-card-content style="display: block">
+                <div class="mat-card-content-left" style=" width: 70%; float: left; display: flex">
+                <div id="{{job.id}}-div" style="width: 70%"><p id="{{job.id}}"></p></div>
+                <div id="{{job.id}}-chart" style="width: 30%; float: right" *ngIf="moreDetails"><app-radar-chart></app-radar-chart></div>
+                <p>
+                  <small>Posted: </small>
+                  {{job.publication_date | date}}
+                </p>
+                </div>
+              </mat-card-content>
+                <!--               <mat-card-content>
+                                   <p id="{{job.id}}"></p>
+                                   <p>
+                                       <small>Posted: </small>
+                                       {{job.publication_date | date}}
+                                   </p>
+                               </mat-card-content>
+                -->
                 <mat-card-actions>
                     <button
                         mat-button color="warn"
