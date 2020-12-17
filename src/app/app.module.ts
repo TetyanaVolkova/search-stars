@@ -19,10 +19,12 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { SearchComponent } from './job-seeker/search/search.component';
 import { ProfileComponent } from './job-seeker/profile/profile.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CommonModule } from "@angular/common";
+import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDividerModule } from '@angular/material/divider';
+import { ChartsModule } from 'ng2-charts';
+import { RadarChartComponent } from './radar-chart/radar-chart.component';
 
 
 @NgModule({
@@ -31,7 +33,8 @@ import { MatDividerModule } from '@angular/material/divider';
     JobSeekerComponent,
     HRViewComponent,
     SearchComponent,
-    ProfileComponent
+    ProfileComponent,
+    RadarChartComponent
   ],
   imports: [
     BrowserModule,
@@ -51,9 +54,10 @@ import { MatDividerModule } from '@angular/material/divider';
     MatInputModule,
     MatCardModule,
     MatTooltipModule,
-    MatDividerModule
+    MatDividerModule,
+    ChartsModule
   ],
   providers: [],
-  bootstrap: [AppComponent] 
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

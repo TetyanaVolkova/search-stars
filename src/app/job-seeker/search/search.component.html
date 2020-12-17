@@ -9,7 +9,7 @@
             </mat-form-field>
             <button mat-button [disabled]="!f.valid" color="primary" type="submit">Search jobs</button>
         </form>
-        
+
         <form id="toggle_form" [formGroup]="formGroup" ngNativeValidate>
             <mat-slide-toggle
                 formControlName="view"
@@ -38,13 +38,19 @@
                     <mat-card-title><small>Company name: </small>{{job.company_name}}</mat-card-title>
                     <mat-card-subtitle>{{job.title}}</mat-card-subtitle>
                 </mat-card-header>
-                <mat-card-content>
-                    <p id="{{job.id}}"></p>
-                    <p>
-                        <small>Posted: </small>
-                        {{job.publication_date | date}}
-                    </p>
-                </mat-card-content>
+
+              <mat-card-content style="display: block">
+                <div class="mat-card-content-left" style=" width: 70%; float: left">
+
+                <div id="{{job.id}}-div" style="width: 70%"><p id="{{job.id}}"></p></div>
+                <p>
+                  <small>Posted: </small>
+                  {{job.publication_date | date}}
+                </p>
+                <div id="{{job.id}}-chart" class="job-match-radar-chart" *ngIf="moreDetails"><app-radar-chart></app-radar-chart></div>
+
+                </div>
+              </mat-card-content>
                 <mat-card-actions>
                     <button
                         mat-button color="warn"
@@ -56,6 +62,6 @@
         </div>
     </div>
     <div *ngIf="formGroup.value.view" id="chart_view">
-        <iframe src="https://remotive.io/"></iframe>
+        <iframe src="http://dowhqk75ricsr.cloudfront.net/jobs_viz.html"></iframe>
     </div>
 </div>
